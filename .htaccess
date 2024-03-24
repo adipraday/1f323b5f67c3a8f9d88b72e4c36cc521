@@ -1,0 +1,14 @@
+<Files "*.php">
+    Require ip 127.0.0.1
+</Files>
+
+<Files "index.php">
+    Require all granted
+</Files>
+
+RewriteEngine On
+
+RewriteBase /codechalenge/
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php [QSA,L]

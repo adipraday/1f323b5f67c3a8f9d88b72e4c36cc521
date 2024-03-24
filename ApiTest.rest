@@ -1,0 +1,23 @@
+### Root / base url endpoint
+curl -X GET \
+  http://localhost/codechalenge/
+
+
+### Request akses token
+curl -X GET \
+  http://localhost/codechalenge/gettoken?action=request_token
+
+
+### Cek token authorize atau tidak
+curl -X GET \
+  https://localhost/codechalenge/checktoken \
+  -H 'x-api-key: ya29.a0Ad52N395hR8d5k-RmlkuXw4FKgAFyGdrXGn2hxDIrfP
+
+
+### Endpoint untuk kirim email
+curl -X POST \
+  https://localhost/codechalenge/checktoken \
+  -H 'x-api-key: ya29.a0Ad52N395hR8d5k-RmlkuXw4FKgAFyGdrXGn2hxDIrfP' \
+  -F 'to=adipradayozan@gmail.com' \
+  -F 'subject=Subject disini' \
+  -F 'message=Pesan atau isi email disini' 
